@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 2
+        versionName "1.0.2"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    compile 'cn.lodz:core:1.0.2'
+    // IJK播放器
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.7.1'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.7.1'
+}
+
+//publish {
+//    userOrg = 'lz9'//bintray.com用户名
+//    groupId = 'cn.lodz'//jcenter上的路径
+//    artifactId = 'mmsplayer'//项目名称
+//    publishVersion = '1.0.2'//版本号
+//    desc = 'Hi, this is a vido play lib'//描述，不重要
+//    website = 'https://github.com/LZ9/VideoDemo'//网站，不重要
+//}
