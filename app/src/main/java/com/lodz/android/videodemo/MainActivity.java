@@ -15,8 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("","xxxx");
-        mVideoPlayer = (IVideoPlayer) findViewById(R.id.video_view);
+        Log.d("","");
         mVideoPlayer = (IVideoPlayer) findViewById(R.id.video_view);
         mVideoPlayer.setListener(new MmsVideoView.Listener() {
             @Override
