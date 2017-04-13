@@ -2,6 +2,7 @@ package com.lodz.android.videodemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.lodz.android.mmsplayer.contract.IVideoPlayer;
 import com.lodz.android.mmsplayer.impl.MmsVideoView;
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Log.d("","xxxx");
         mVideoPlayer = (IVideoPlayer) findViewById(R.id.video_view);
         mVideoPlayer.setListener(new MmsVideoView.Listener() {
             @Override
